@@ -114,7 +114,7 @@ async def update_task(task_id: int, task_data: TaskCreate):
     updated_row = cursor.fetchone()
     conn.close()
 
-# return the updated task
+    # return the updated task
     return TaskRead(**dict(updated_row))
     # raise HTTPException(status_code=status.HTTP_501_NOT_IMPLEMENTED, detail="Not implemented")
 
